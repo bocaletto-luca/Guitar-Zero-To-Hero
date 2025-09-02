@@ -1,1 +1,316 @@
-a
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Bocaletto Luca" />
+  <meta name="description" content="Chapter 5: Advanced Techniques. Explore open tunings, percussive effects, tapping, harmonics, solo arrangements, and improvisation strategies." />
+  <meta name="keywords" content="open tuning, percussive guitar, tapping, harmonics, guitar arrangement, improvisation" />
+  <link rel="canonical" href="https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-5.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Guitar Zero To Hero — Chapter 5: Advanced Techniques" />
+  <meta property="og:description" content="Explore open tunings, percussive effects, tapping, harmonics, solo arrangements, and improvisation strategies." />
+  <meta property="og:url" content="https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-5.html" />
+  <meta property="og:site_name" content="Guitar Zero To Hero" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="prev" href="chapter-4.html" />
+  <link rel="next" href="chapter-6.html" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Chapter",
+    "name":"Chapter 5: Advanced Techniques",
+    "position":"5",
+    "isPartOf":{
+      "@type":"Book",
+      "name":"Guitar Zero To Hero",
+      "author":{"@type":"Person","name":"Bocaletto Luca"},
+      "inLanguage":"en"
+    },
+    "author":{"@type":"Person","name":"Bocaletto Luca"},
+    "about":["Open tunings","Percussive techniques","Tapping","Harmonics","Arrangement","Improvisation"],
+    "learningResourceType":["Course","Tutorial"],
+    "url":"https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-5.html"
+  }
+  </script>
+  <title>Guitar Zero To Hero — Chapter 5: Advanced Techniques</title>
+  <style>
+    /* global styles repeated for consistency */
+    :root{--bg:#f7f7f9;--card:#fff;--text:#1f2937;--muted:#6b7280;--primary:#1f6feb;
+    --primary-contrast:#fff;--border:#e5e7eb;--accent:#10b981;--warning:#f59e0b;
+    --danger:#ef4444;--mono:ui-monospace,Menlo,Monaco,"Courier New",monospace;
+    --radius:12px;--shadow:0 6px 24px rgba(17,24,39,0.08);--shadow-sm:0 2px 10px rgba(17,24,39,0.06);
+    --maxw:1200px}
+    *,*::before,*::after{box-sizing:border-box}
+    html,body{margin:0;padding:0;height:100%}
+    body{font-family:system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header.site{background:#0b1220;color:#e5e7eb;position:sticky;top:0;z-index:50;
+      box-shadow:var(--shadow-sm)}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    .bar{display:flex;align-items:center;justify-content:space-between;padding:16px 0}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:36px;height:36px;border-radius:8px;
+      background:linear-gradient(135deg,#1f6feb,#9333ea);
+      display:grid;place-items:center;color:#fff;font-weight:700;
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,0.15)}
+    .brand h1{margin:0;font-size:1.05rem;letter-spacing:.2px}
+    nav.primary ul{display:flex;gap:10px;flex-wrap:wrap;padding:0;margin:0;list-style:none}
+    nav.primary a{display:block;padding:10px 12px;color:#e5e7eb;border-radius:8px}
+    nav.primary a[aria-current="page"]{background:rgba(255,255,255,0.08)}
+    .hero{background:radial-gradient(1200px 400px at 20% -10%,rgba(31,111,235,.18),transparent 60%),
+                   radial-gradient(1200px 400px at 80% 110%,rgba(147,51,234,.16),transparent 60%),#0b1220;
+      color:#fff;padding:48px 0 28px;border-bottom:1px solid rgba(255,255,255,0.08)}
+    .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .kicker{font-size:.8rem;text-transform:uppercase;color:#a5b4fc;font-weight:600;letter-spacing:.1em}
+    .hero h2{margin:.3rem 0 1rem;font-size:2rem;line-height:1.2}
+    .hero p{margin:0 0 1rem;color:#cbd5e1}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;border-radius:10px;
+      border:1px solid transparent;font-weight:600;box-shadow:var(--shadow-sm)}
+    .btn.primary{background:var(--primary);color:var(--primary-contrast)}
+    .btn.ghost{background:transparent;border-color:rgba(255,255,255,0.2);color:#fff}
+    main{padding:28px 0}
+    .content{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    aside.toc{position:sticky;top:96px;align-self:start;background:var(--card);
+      border:1px solid var(--border);border-radius:var(--radius);padding:16px;
+      box-shadow:var(--shadow-sm)}
+    aside.toc h3{margin:0 0 8px;font-size:1rem}
+    aside.toc nav ul{list-style:none;padding:0;margin:0;display:grid;gap:6px}
+    aside.toc a{display:block;color:var(--muted);padding:6px 8px;border-radius:8px}
+    aside.toc a:hover{background:#f3f4f6;color:var(--text)}
+    article.chapter{background:var(--card);border:1px solid var(--border);
+      border-radius:var(--radius);box-shadow:var(--shadow);padding:24px}
+    article.chapter h2{margin-top:0;font-size:1.6rem}
+    section.block{margin:28px 0}
+    section.block h3{margin:0 0 10px;font-size:1.2rem}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    pre{background:#0f172a;color:#e5e7eb;padding:14px;border-radius:10px;overflow:auto;line-height:1.5}
+    code,pre code{font-family:var(--mono)}
+    .note{border-left:6px solid var(--primary);border:1px solid var(--border);
+      border-radius:10px;padding:14px 16px;background:#fff;margin:16px 0}
+    .tip{border-left:6px solid #3b82f6;border:1px solid var(--border);
+      border-radius:10px;padding:14px 16px;background:#fff;margin:16px 0}
+    footer.site{border-top:1px solid var(--border);background:#0b1220;color:#9ca3af;margin-top:28px}
+    footer .wrap{padding:18px 20px}
+    .footgrid{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+    @media(max-width:1024px){.hero .grid{grid-template-columns:1fr};.content{grid-template-columns:1fr};
+      aside.toc{position:static}}
+    @media(max-width:640px){.grid-2{grid-template-columns:1fr};.hero h2{font-size:1.6rem}}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+      clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#content">Skip to content</a>
+  <header class="site" role="banner">
+    <div class="wrap bar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">GZ</div>
+        <h1>Guitar Zero To Hero</h1>
+      </div>
+      <nav class="primary" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chapter-1.html">Chapter 1</a></li>
+          <li><a href="chapter-2.html">Chapter 2</a></li>
+          <li><a href="chapter-3.html">Chapter 3</a></li>
+          <li><a href="chapter-4.html">Chapter 4</a></li>
+          <li><a aria-current="page" href="chapter-5.html">Chapter 5</a></li>
+          <li><a href="chapter-6.html">Chapter 6</a></li>
+          <li><a href="chapter-7.html">Chapter 7</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="hero">
+      <div class="wrap">
+        <div class="grid">
+          <div>
+            <div class="kicker">Chapter 5</div>
+            <h2>Advanced Techniques</h2>
+            <p>Open tunings, percussive effects, tapping, harmonics, solo arrangement ideas, and improvisation strategies.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#toc">Open chapter index</a>
+              <a class="btn ghost" href="chapter-6.html">Go to Chapter 6</a>
+            </div>
+          </div>
+          <div class="card">
+            <strong>Chapter scope</strong>
+            <ul>
+              <li>Open & creative tunings</li>
+              <li>Percussive guitar techniques</li>
+              <li>Tapping & harmonics</li>
+              <li>Solo arrangements</li>
+              <li>Improvisation</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="content" class="wrap">
+    <div class="breadcrumbs">Home / Chapter 5</div>
+    <div class="content">
+      <aside id="toc" class="toc" aria-labelledby="toc-title">
+        <h3 id="toc-title">Chapter index</h3>
+        <nav aria-label="Chapter sections">
+          <ul>
+            <li><a href="#5-1-open-tunings">5.1 Open & Creative Tunings</a></li>
+            <li><a href="#5-2-percussion">5.2 Percussive Techniques</a></li>
+            <li><a href="#5-3-tapping-harmonics">5.3 Tapping & Harmonics</a></li>
+            <li><a href="#5-4-arrangement">5.4 Solo Arrangement</a></li>
+            <li><a href="#5-5-improvisation">5.5 Improvisation</a></li>
+            <li><a href="#5-next">5.6 Next chapter</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="chapter" role="article" aria-labelledby="title">
+        <h2 id="title">Chapter 5 — Advanced Techniques</h2>
+
+        <section id="5-1-open-tunings" class="block">
+          <h3>5.1 Open & Creative Tunings</h3>
+          <p>Alternate tunings unlock new voicings and resonances. Experiment with these common setups.</p>
+          <div class="table-responsive">
+            <table class="table">
+              <thead>
+                <tr><th>Tuning</th><th>Strings (6→1)</th><th>Characteristic</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Open D</td>
+                  <td><code>D A D F♯ A D</code></td>
+                  <td>Full D major chord on open strings</td>
+                </tr>
+                <tr>
+                  <td>Open C</td>
+                  <td><code>C G C G C E</code></td>
+                  <td>Rich C major resonance, deep bass</td>
+                </tr>
+                <tr>
+                  <td>DADGAD</td>
+                  <td><code>D A D G A D</code></td>
+                  <td>Modal, droning possibilities</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="tip">
+            <strong>Exploration</strong>
+            <p>Strum open strings, then move single fingers to discover new chord shapes.</p>
+          </div>
+        </section>
+
+        <section id="5-2-percussion" class="block">
+          <h3>5.2 Percussive Techniques</h3>
+          <p>Add rhythmic elements by tapping and slapping different parts of the guitar body.</p>
+          <div class="cards">
+            <div class="card">
+              <strong>Body slap</strong>
+              <p>With the fleshy palm, strike the lower bout near the bridge for a kick-drum sound.</p>
+            </div>
+            <div class="card">
+              <strong>Thumb slap</strong>
+              <p>Use thumb side to hit the lower strings against the fretboard for a snare-like pop.</p>
+            </div>
+            <div class="card">
+              <strong>Tap rhythm</strong>
+              <pre><code>// Example pattern:
+| Tap – – Tap | Tap Tap – – |</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="5-3-tapping-harmonics" class="block">
+          <h3>5.3 Tapping & Harmonics</h3>
+          <p>Tapping multiplies fretting and plucking in one hand; harmonics add bell-like overtones.</p>
+          <div class="grid-2">
+            <div>
+              <strong>Tapping lick</strong>
+              <pre><code>e|----------------12t19p12----------------|
+B|-----------12h15------------15p12--------|
+G|--12h14~-----------------------------14---|
+D|-----------------------------------------|
+A|-----------------------------------------|
+E|-----------------------------------------|</code></pre>
+            </div>
+            <div>
+              <strong>Natural & artificial harmonics</strong>
+              <pre><code>e|--<12>----12^----<7>------|
+B|--<12>-------->----<7>----|
+G|--------------------------|  
+// <n> = natural at fret n, ^ = pinch/artificial</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="5-4-arrangement" class="block">
+          <h3>5.4 Solo Arrangement</h3>
+          <p>Combine melody, harmony, and bass in one performance for a complete solo piece.</p>
+          <pre><code>// C chord melody & bass
+e|--0-----------0------------|
+B|----1---0h1-----1-0--------|
+G|------0---------0---0------|
+D|2-----------2--------2-----|
+A|3--------------------------|
+E|---------------------------|</code></pre>
+          <div class="note">
+            <strong>Approach</strong>
+            <p>Outline root movement in bass, then weave melody on higher strings.</p>
+          </div>
+        </section>
+
+        <section id="5-5-improvisation" class="block">
+          <h3>5.5 Improvisation</h3>
+          <p>Use scales, motifs, and call-and-response to craft solos that speak.</p>
+          <div class="cards">
+            <div class="card">
+              <strong>Scale foundation</strong>
+              <p>Start with minor pentatonic box 1, then add notes of the major scale for color.</p>
+            </div>
+            <div class="card">
+              <strong>Motif development</strong>
+              <p>Create a 2-note phrase, repeat with variation in rhythm or pitch.</p>
+            </div>
+            <div class="card">
+              <strong>Call & response</strong>
+              <p>Phrase (“call”), then answer with a contrasting lick (“response”).</p>
+            </div>
+          </div>
+          <pre><code>// Example call & response in E minor
+Call:    e|--0-3-0--------|
+         B|--------3-0----|
+Response:e|--5-7-5--------|
+         B|--------7-5----|</code></pre>
+        </section>
+
+        <section id="5-next" class="block">
+          <h3>5.6 Next chapter</h3>
+          <p>Proceed to Chapter 6 for Repertoire & Performance: applying techniques in songs, ensemble playing, recording, and stage presence.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="chapter-6.html">Go to Chapter 6</a>
+            <a class="btn ghost" href="chapter-4.html">Back to Chapter 4</a>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <div class="wrap footgrid">
+      <p>&copy; 2025 Bocaletto Luca. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="chapter-4.html">Chapter 4</a>
+        <a href="chapter-5.html">Chapter 5</a>
+        <a href="https://github.com/bocaletto-luca/Guitar-Zero-To-Hero" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
