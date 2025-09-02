@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Bocaletto Luca" />
+  <meta name="description" content="Chapter 2: Technical Foundations. Master posture, hand positioning, strumming, fingerstyle, palm mute, left-hand technique, chord changes, rhythm patterns, and metronome practice." />
+  <meta name="keywords" content="guitar posture, hand positioning, strumming, fingerstyle, palm mute, left-hand technique, chord changes, metronome, rhythm practice" />
+  <link rel="canonical" href="https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-2.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Guitar Zero To Hero — Chapter 2: Technical Foundations" />
+  <meta property="og:description" content="Master posture, hand positioning, strumming, fingerstyle, palm mute, left-hand technique, chord changes, rhythm patterns, and metronome practice." />
+  <meta property="og:url" content="https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-2.html" />
+  <meta property="og:site_name" content="Guitar Zero To Hero" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="prev" href="chapter-1.html" />
+  <link rel="next" href="chapter-3.html" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Chapter",
+    "name":"Chapter 2: Technical Foundations",
+    "position":"2",
+    "isPartOf":{
+      "@type":"Book",
+      "name":"Guitar Zero To Hero",
+      "author":{"@type":"Person","name":"Bocaletto Luca"},
+      "inLanguage":"en"
+    },
+    "author":{"@type":"Person","name":"Bocaletto Luca"},
+    "about":["Posture","Strumming","Fingerstyle","Palm mute","Left-hand technique","Chords","Rhythm","Metronome"],
+    "learningResourceType":["Course","Tutorial"],
+    "url":"https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-2.html"
+  }
+  </script>
+  <title>Guitar Zero To Hero — Chapter 2: Technical Foundations</title>
+  <style>
+    :root{
+      --bg:#f7f7f9;--card:#ffffff;--text:#1f2937;--muted:#6b7280;
+      --primary:#1f6feb;--primary-contrast:#ffffff;--border:#e5e7eb;
+      --accent:#10b981;--warning:#f59e0b;--danger:#ef4444;
+      --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --radius:12px;--shadow:0 6px 24px rgba(17,24,39,0.08);--shadow-sm:0 2px 10px rgba(17,24,39,0.06);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg);color:var(--text);line-height:1.7;
+    }
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header.site{
+      background:#0b1220;color:#e5e7eb;position:sticky;top:0;z-index:50;
+      box-shadow:var(--shadow-sm);
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    .bar{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:16px 0;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:36px;height:36px;border-radius:8px;
+      background:linear-gradient(135deg,#1f6feb,#9333ea);
+      display:grid;place-items:center;color:#fff;font-weight:700;
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,0.15);
+    }
+    .brand h1{font-size:1.05rem;margin:0;letter-spacing:.2px}
+    nav.primary ul{
+      list-style:none;margin:0;padding:0;display:flex;gap:10px;flex-wrap:wrap
+    }
+    nav.primary a{
+      display:block;padding:10px 12px;border-radius:8px;color:#e5e7eb
+    }
+    nav.primary a[aria-current="page"]{background:rgba(255,255,255,0.08)}
+    .hero{
+      background: radial-gradient(1200px 400px at 20% -10%, rgba(31,111,235,.18), transparent 60%),
+                  radial-gradient(1200px 400px at 80% 110%, rgba(147,51,234,.16), transparent 60%),
+                  #0b1220;
+      color:#fff;padding:48px 0 28px;border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .hero .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}
+    .kicker{color:#a5b4fc;font-weight:600;text-transform:uppercase;font-size:.8rem;letter-spacing:.1em}
+    .hero h2{margin:.3rem 0 1rem;font-size:2rem;line-height:1.2}
+    .hero p{color:#cbd5e1;margin:0 0 1rem}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 14px;
+      border-radius:10px;border:1px solid transparent;font-weight:600;box-shadow:var(--shadow-sm)}
+    .btn.primary{background:var(--primary);color:var(--primary-contrast)}
+    .btn.ghost{background:transparent;border-color:rgba(255,255,255,0.2);color:#fff}
+    main{padding:28px 0}
+    .content{display:grid;grid-template-columns:280px 1fr;gap:24px}
+    aside.toc{
+      position:sticky;top:96px;align-self:start;background:var(--card);
+      border:1px solid var(--border);border-radius:var(--radius);
+      padding:16px;box-shadow:var(--shadow-sm)
+    }
+    aside.toc h3{margin:0 0 8px;font-size:1rem}
+    aside.toc nav ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    aside.toc a{color:var(--muted);padding:6px 8px;border-radius:8px;display:block}
+    aside.toc a:hover{background:#f3f4f6;color:var(--text)}
+    article.chapter{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:24px
+    }
+    article.chapter h2{margin-top:0;font-size:1.6rem}
+    section.block{margin:28px 0}
+    section.block h3{margin:0 0 10px;font-size:1.2rem}
+    .card{border:1px solid var(--border);border-radius:12px;padding:16px;background:#fff}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .table{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .table th,.table td{padding:10px;border-bottom:1px solid var(--border);text-align:left}
+    .table thead{background:#f9fafb}
+    pre{background:#0f172a;color:#e5e7eb;padding:14px;border-radius:10px;overflow:auto;line-height:1.5}
+    code, pre code{font-family:var(--mono)}
+    .note{border:1px solid var(--border);border-left-width:6px;border-radius:10px;
+      padding:14px 16px;margin:16px 0;background:#fff;border-left-color:var(--primary)}
+    .tip{border:1px solid var(--border);border-left-width:6px;border-radius:10px;
+      padding:14px 16px;margin:16px 0;background:#fff;border-left-color:#3b82f6}
+    .warning{border:1px solid var(--border);border-left-width:6px;border-radius:10px;
+      padding:14px 16px;margin:16px 0;background:#fff;border-left-color:var(--warning)}
+    footer.site{border-top:1px solid var(--border);background:#0b1220;color:#9ca3af;margin-top:28px}
+    footer .wrap{padding:18px 20px}
+    .footgrid{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+    @media (max-width: 1024px){
+      .hero .grid{grid-template-columns:1fr}
+      .content{grid-template-columns:1fr}
+      aside.toc{position:static}
+    }
+    @media (max-width: 640px){
+      .cards,.grid-2{grid-template-columns:1fr}
+      .hero h2{font-size:1.6rem}
+    }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+</head>
+<body>
+  <a class="sr-only" href="#content">Skip to content</a>
+  <header class="site" role="banner">
+    <div class="wrap bar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">GZ</div>
+        <h1>Guitar Zero To Hero</h1>
+      </div>
+      <nav class="primary" role="navigation" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="chapter-1.html">Chapter 1</a></li>
+          <li><a aria-current="page" href="chapter-2.html">Chapter 2</a></li>
+          <li><a href="chapter-3.html">Chapter 3</a></li>
+          <li><a href="chapter-4.html">Chapter 4</a></li>
+          <li><a href="chapter-5.html">Chapter 5</a></li>
+          <li><a href="chapter-6.html">Chapter 6</a></li>
+          <li><a href="chapter-7.html">Chapter 7</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section class="hero">
+      <div class="wrap">
+        <div class="grid">
+          <div>
+            <div class="kicker">Chapter 2</div>
+            <h2>Technical Foundations</h2>
+            <p>Posture, hand positioning, strumming, fingerstyle, palm mute, left-hand setup, chord shapes, rhythm patterns, and metronome drills.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#toc">Open chapter index</a>
+              <a class="btn ghost" href="chapter-3.html">Go to Chapter 3</a>
+            </div>
+          </div>
+          <div class="card">
+            <strong>Chapter scope</strong>
+            <ul>
+              <li>Posture & grip</li>
+              <li>Right-hand basics</li>
+              <li>Left-hand basics</li>
+              <li>Essential chord shapes</li>
+              <li>Rhythm & timing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="content" class="wrap">
+    <div class="breadcrumbs">Home / Chapter 2</div>
+    <div class="content">
+      <aside id="toc" class="toc" aria-labelledby="toc-title">
+        <h3 id="toc-title">Chapter index</h3>
+        <nav aria-label="Chapter sections">
+          <ul>
+            <li><a href="#2-1-posture-grip">2.1 Posture &amp; Grip</a></li>
+            <li><a href="#2-2-rh-techniques">2.2 Right-Hand Techniques</a></li>
+            <li><a href="#2-3-lh-techniques">2.3 Left-Hand Techniques</a></li>
+            <li><a href="#2-4-essential-chords">2.4 Essential Chords</a></li>
+            <li><a href="#2-5-rhythm-timing">2.5 Rhythm &amp; Timing</a></li>
+            <li><a href="#2-next">2.6 Next chapter</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="chapter" role="article" aria-labelledby="title">
+        <h2 id="title">Chapter 2 — Technical Foundations</h2>
+
+        <section id="2-1-posture-grip" class="block">
+          <h3>2.1 Posture &amp; Grip</h3>
+          <p>Correct posture and grip set the foundation for healthy, efficient technique. Maintain relaxed shoulders, a straight back, and neutral wrists.</p>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Seated posture</strong>
+              <ul>
+                <li>Sit upright, feet flat on floor</li>
+                <li>Guitar body rests on right thigh (righthanded)</li>
+                <li>Neck angled ~15° upward</li>
+                <li>Fretting wrist neutral, not bent</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>Standing posture</strong>
+              <ul>
+                <li>Use strap at comfortable height</li>
+                <li>Guitar angle similar to sitting</li>
+                <li>Balance weight evenly</li>
+                <li>Wrist alignment straight</li>
+              </ul>
+            </div>
+          </div>
+          <div class="tip">
+            <strong>Grip the neck</strong>
+            <p>Thumb rests mid‐neck behind the fretboard. Thumb height should align with the 2nd finger joint for leverage.</p>
+          </div>
+        </section>
+
+        <section id="2-2-rh-techniques" class="block">
+          <h3>2.2 Right-Hand Techniques</h3>
+          <p>Explore three core approaches: strumming with a pick, fingerstyle, and palm muting for tonal variation.</p>
+          <div class="cards">
+            <div class="card">
+              <strong>Strumming basics</strong>
+              <ul>
+                <li>Downstroke (D) &amp; upstroke (U)</li>
+                <li>Relaxed wrist hinge</li>
+                <li>Consistent motion, minimal elbow</li>
+                <li>Start on downbeats</li>
+              </ul>
+              <pre><code>// Eighth-note pattern
+| D   U   D   U |
+  1 & 2 & 3 & 4 &</code></pre>
+            </div>
+            <div class="card">
+              <strong>Fingerstyle</strong>
+              <ul>
+                <li>p (thumb) → E/A/D strings</li>
+                <li>i (index) → G string</li>
+                <li>m (middle) → B string</li>
+                <li>a (ring) → e string</li>
+              </ul>
+              <pre><code>// Simple arpeggio
+p     i     m     a
+E|------0-------|
+B|----1---1-----|
+G|--0-------0---|
+D|2-----------2-|
+A|3-------------|
+E|--------------|</code></pre>
+            </div>
+            <div class="card">
+              <strong>Palm mute</strong>
+              <ul>
+                <li>Rest side of palm on bridge</li>
+                <li>Light pressure for muted “chuck”</li>
+                <li>Combine with strumming patterns</li>
+              </ul>
+              <pre><code>// Muted quarter notes
+| PM– D – PM– D |</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="2-3-lh-techniques" class="block">
+          <h3>2.3 Left-Hand Techniques</h3>
+          <p>Develop clear, buzz-free notes by placing your fingertip just behind the fret wire and applying even pressure.</p>
+          <div class="grid-2">
+            <div>
+              <strong>Finger pressure &amp; placement</strong>
+              <ul>
+                <li>Press with fingertip, not pad</li>
+                <li>Place close to fret wire (<3 mm)</li>
+                <li>Apply enough force to ring cleanly</li>
+              </ul>
+            </div>
+            <div>
+              <strong>Warm-up chromatic exercise</strong>
+              <pre><code>e|0-1-2-3-2-1-0|  
+B|0-1-2-3-2-1-0|
+G|0-1-2-3-2-1-0|
+D|0-1-2-3-2-1-0|
+A|0-1-2-3-2-1-0|
+E|0-1-2-3-2-1-0|  
+// Repeat slowly, then increase tempo</code></pre>
+            </div>
+          </div>
+          <div class="note">
+            <strong>Stretching</strong>
+            <p>Open hand and finger stretches before playing reduce tension and prevent injury.</p>
+          </div>
+        </section>
+
+        <section id="2-4-essential-chords" class="block">
+          <h3>2.4 Essential Chords</h3>
+          <p>Learn major, minor, and seventh open chords to form the backbone of countless songs.</p>
+          <table class="table">
+            <thead>
+              <tr><th>Chord</th><th>Diagram</th><th>Fingering</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>C</td>
+                <td>
+                  <pre><code>e|0  
+B|1  
+G|0  
+D|2  
+A|3  
+E|x</code></pre>
+                </td>
+                <td>1→B1, 2→D2, 3→A3</td>
+              </tr>
+              <tr>
+                <td>G</td>
+                <td>
+                  <pre><code>e|3  
+B|0  
+G|0  
+D|0  
+A|2  
+E|3</code></pre>
+                </td>
+                <td>1→A2, 2→e3, 3→E3</td>
+              </tr>
+              <tr>
+                <td>D</td>
+                <td>
+                  <pre><code>e|2  
+B|3  
+G|2  
+D|0  
+A|x  
+E|x</code></pre>
+                </td>
+                <td>1→G2, 2→e2, 3→B3</td>
+              </tr>
+              <tr>
+                <td>Am</td>
+                <td>
+                  <pre><code>e|0  
+B|1  
+G|2  
+D|2  
+A|0  
+E|x</code></pre>
+                </td>
+                <td>1→B1, 2→G2, 3→D2</td>
+              </tr>
+              <tr>
+                <td>E7</td>
+                <td>
+                  <pre><code>e|0  
+B|0  
+G|1  
+D|0  
+A|2  
+E|0</code></pre>
+                </td>
+                <td>1→G1, 2→A2</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="block">
+            <h4 style="margin:10px 0 6px">Chord change drill</h4>
+            <pre><code>| C | G | Am | F |  
+// Switch on each bar, 4 cycles</code></pre>
+          </div>
+        </section>
+
+        <section id="2-5-rhythm-timing" class="block">
+          <h3>2.5 Rhythm &amp; Timing</h3>
+          <p>Solid timing is built with a metronome and by reading simple rhythmic notation.</p>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Note values</strong>
+              <ul>
+                <li>Quarter note (♩) = 1 beat</li>
+                <li>Eighth note (♪) = 1/2 beat</li>
+                <li>Sixteenth note (♬) = 1/4 beat</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>Metronome drill</strong>
+              <ul>
+                <li>Set → 60 bpm</li>
+                <li>Play quarter notes: 1 2 3 4</li>
+                <li>Play eighths: 1 & 2 & 3 & 4 &</li>
+                <li>Combine with chord changes</li>
+              </ul>
+            </div>
+          </div>
+          <div class="block">
+            <h4 style="margin:10px 0 6px">Example pattern</h4>
+            <pre><code>// Em → G with eighths at ♩=60
+| Em ♪♪♪♪ | G ♪♪♪♪ |  
+// 1&2&3&4& | 1&2&3&4&</code></pre>
+          </div>
+        </section>
+
+        <section id="2-next" class="block">
+          <h3>2.6 Next chapter</h3>
+          <p>Proceed to Chapter 3 for Reading &amp; Essential Theory: tablature, staff notation, scales, intervals, and basic harmony.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="chapter-3.html">Go to Chapter 3</a>
+            <a class="btn ghost" href="chapter-1.html">Back to Chapter 1</a>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <div class="wrap footgrid">
+      <p>&copy; 2025 Bocaletto Luca. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="chapter-1.html">Chapter 1</a>
+        <a href="chapter-2.html">Chapter 2</a>
+        <a href="https://github.com/bocaletto-luca/Guitar-Zero-To-Hero" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
