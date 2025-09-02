@@ -1,154 +1,760 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Chapter 1 - Introduction & Preparation | Guitar Zero To Hero by Bocaletto Luca. Learn the fundamentals of acoustic guitar, from choosing your instrument to tuning and posture.">
-    <meta name="keywords" content="guitar basics, acoustic guitar, guitar introduction, guitar preparation, guitar posture, guitar tuning">
-    <meta name="author" content="Bocaletto Luca">
-    <title>Chapter 1 - Introduction & Preparation | Guitar Zero To Hero</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f8f8f8;
-            color: #333;
-            line-height: 1.6;
-        }
-        header {
-            background: #222;
-            color: #fff;
-            padding: 20px 0;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2rem;
-        }
-        nav {
-            background: #444;
-        }
-        nav ul {
-            display: flex;
-            flex-wrap: wrap;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0;
-        }
-        nav ul li a {
-            display: block;
-            padding: 15px 20px;
-            color: #fff;
-            text-decoration: none;
-        }
-        nav ul li a:hover {
-            background: #666;
-        }
-        main {
-            max-width: 1200px;
-            margin: auto;
-            padding: 20px;
-        }
-        section {
-            background: #fff;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 5px;
-        }
-        section h2 {
-            margin-top: 0;
-        }
-        footer {
-            background: #222;
-            color: #fff;
-            text-align: center;
-            padding: 15px 0;
-            font-size: 0.9rem;
-        }
-        @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-            }
-            nav ul li a {
-                text-align: center;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="author" content="Bocaletto Luca" />
+  <meta name="description" content="Chapter 1: Introduction & Preparation. Absolute-beginner acoustic guitar foundation: instrument types, choosing a guitar, anatomy, tuning, posture, first sounds, and starter exercises." />
+  <meta name="keywords" content="acoustic guitar, beginner guitar, guitar anatomy, guitar tuning, guitar posture, guitar basics, guitar exercises, learn guitar from scratch" />
+  <link rel="canonical" href="https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-1.html" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Guitar Zero To Hero — Chapter 1: Introduction & Preparation" />
+  <meta property="og:description" content="Absolute-beginner foundation for acoustic guitar: types, setup, tuning, posture, first chords, rhythm, and structured exercises." />
+  <meta property="og:url" content="https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-1.html" />
+  <meta property="og:site_name" content="Guitar Zero To Hero" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Guitar Zero To Hero — Chapter 1: Introduction & Preparation</title>
+  <style>
+    :root{
+      --bg:#f7f7f9;
+      --card:#ffffff;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --primary:#1f6feb;
+      --primary-contrast:#ffffff;
+      --border:#e5e7eb;
+      --accent:#10b981;
+      --warning:#f59e0b;
+      --danger:#ef4444;
+      --mono: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+      --radius:12px;
+      --shadow:0 6px 24px rgba(17,24,39,0.08);
+      --shadow-sm:0 2px 10px rgba(17,24,39,0.06);
+      --maxw:1200px;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.7;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    header.site{
+      background:#0b1220;
+      color:#e5e7eb;
+      position:sticky;top:0;z-index:50;
+      box-shadow:var(--shadow-sm);
+    }
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+    .bar{
+      display:flex;align-items:center;justify-content:space-between;
+      padding:16px 0;
+    }
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{
+      width:36px;height:36px;border-radius:8px;
+      background:linear-gradient(135deg,#1f6feb, #9333ea);
+      display:grid;place-items:center;color:#fff;font-weight:700;
+      box-shadow:inset 0 0 0 2px rgba(255,255,255,0.15);
+    }
+    .brand h1{font-size:1.05rem;margin:0;letter-spacing:.2px}
+    nav.primary ul{
+      list-style:none;margin:0;padding:0;display:flex;gap:10px;flex-wrap:wrap
+    }
+    nav.primary a{
+      display:block;padding:10px 12px;border-radius:8px;color:#e5e7eb
+    }
+    nav.primary a[aria-current="page"]{background:rgba(255,255,255,0.08)}
+    .hero{
+      background: radial-gradient(1200px 400px at 20% -10%, rgba(31,111,235,.18), transparent 60%),
+                  radial-gradient(1200px 400px at 80% 110%, rgba(147,51,234,.16), transparent 60%),
+                  #0b1220;
+      color:#fff;
+      padding:48px 0 28px;
+      border-bottom:1px solid rgba(255,255,255,0.08);
+    }
+    .hero .grid{
+      display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center
+    }
+    .kicker{color:#a5b4fc;font-weight:600;text-transform:uppercase;font-size:.8rem;letter-spacing:.1em}
+    .hero h2{margin:.3rem 0 1rem;font-size:2rem;line-height:1.2}
+    .hero p{color:#cbd5e1;margin:0 0 1rem}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:10px}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:10px 14px;border-radius:10px;border:1px solid transparent;
+      font-weight:600;box-shadow:var(--shadow-sm)
+    }
+    .btn.primary{background:var(--primary);color:var(--primary-contrast)}
+    .btn.ghost{background:transparent;border-color:rgba(255,255,255,0.2);color:#fff}
+    main{padding:28px 0}
+    .content{
+      display:grid;grid-template-columns:280px 1fr;gap:24px
+    }
+    aside.toc{
+      position:sticky;top:96px;align-self:start;background:var(--card);
+      border:1px solid var(--border);border-radius:var(--radius);
+      padding:16px;box-shadow:var(--shadow-sm)
+    }
+    aside.toc h3{margin:0 0 8px;font-size:1rem}
+    aside.toc nav ul{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+    aside.toc a{color:var(--muted);padding:6px 8px;border-radius:8px;display:block}
+    aside.toc a:hover{background:#f3f4f6;color:var(--text)}
+    article.chapter{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);padding:24px
+    }
+    article.chapter h2{margin-top:0;font-size:1.6rem}
+    section.block{margin:28px 0}
+    section.block h3{margin:0 0 10px;font-size:1.2rem}
+    .note,.warning,.success,.tip{
+      border:1px solid var(--border);border-left-width:6px;border-radius:10px;padding:14px 14px 14px 16px;margin:16px 0;background:#fff
+    }
+    .note{border-left-color:var(--primary)}
+    .success{border-left-color:var(--accent)}
+    .warning{border-left-color:var(--warning)}
+    .tip{border-left-color:#3b82f6}
+    .cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+    .card{border:1px solid var(--border);border-radius:12px;padding:16px;background:#fff}
+    .muted{color:var(--muted)}
+    .kbd{font-family:var(--mono);font-size:.9em;background:#f3f4f6;border:1px solid var(--border);border-radius:6px;padding:2px 6px}
+    pre{background:#0f172a;color:#e5e7eb;padding:14px;border-radius:10px;overflow:auto;line-height:1.5}
+    code, pre code{font-family:var(--mono)}
+    .grid-2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+    .list-tight li{margin:6px 0}
+    .table{width:100%;border-collapse:collapse;border:1px solid var(--border);border-radius:10px;overflow:hidden}
+    .table th,.table td{padding:10px;border-bottom:1px solid var(--border);text-align:left}
+    .table thead{background:#f9fafb}
+    .breadcrumbs{font-size:.9rem;margin-bottom:10px;color:var(--muted)}
+    footer.site{border-top:1px solid var(--border);background:#0b1220;color:#9ca3af;margin-top:28px}
+    footer .wrap{padding:18px 20px}
+    .footgrid{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center}
+    @media (max-width: 1024px){
+      .hero .grid{grid-template-columns:1fr}
+      .content{grid-template-columns:1fr}
+      aside.toc{position:static}
+      .grid-3{grid-template-columns:repeat(2,minmax(0,1fr))}
+    }
+    @media (max-width: 640px){
+      .cards,.grid-2,.grid-3{grid-template-columns:1fr}
+      .hero h2{font-size:1.6rem}
+    }
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+  </style>
+  <link rel="prev" href="index.html" />
+  <link rel="next" href="chapter-2.html" />
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Chapter",
+    "name":"Chapter 1: Introduction & Preparation",
+    "position":"1",
+    "isPartOf":{
+      "@type":"Book",
+      "name":"Guitar Zero To Hero",
+      "author":{"@type":"Person","name":"Bocaletto Luca"},
+      "inLanguage":"en"
+    },
+    "author":{"@type":"Person","name":"Bocaletto Luca"},
+    "about":["Acoustic Guitar","Guitar Basics","Instrument Anatomy","Tuning","Posture"],
+    "learningResourceType":["Course","Tutorial"],
+    "url":"https://bocaletto-luca.github.io/Guitar-Zero-To-Hero/chapter-1.html"
+  }
+  </script>
 </head>
 <body>
-    <header>
+  <a class="sr-only" href="#content">Skip to content</a>
+  <header class="site" role="banner">
+    <div class="wrap bar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">GZ</div>
         <h1>Guitar Zero To Hero</h1>
-        <p>Chapter 1 - Introduction & Preparation</p>
-    </header>
-    <nav>
+      </div>
+      <nav class="primary" role="navigation" aria-label="Primary">
         <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="chapter-1.html">Chapter 1</a></li>
-            <li><a href="chapter-2.html">Chapter 2</a></li>
-            <li><a href="chapter-3.html">Chapter 3</a></li>
-            <li><a href="chapter-4.html">Chapter 4</a></li>
-            <li><a href="chapter-5.html">Chapter 5</a></li>
-            <li><a href="chapter-6.html">Chapter 6</a></li>
-            <li><a href="chapter-7.html">Chapter 7</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a aria-current="page" href="chapter-1.html">Chapter 1</a></li>
+          <li><a href="chapter-2.html">Chapter 2</a></li>
+          <li><a href="chapter-3.html">Chapter 3</a></li>
+          <li><a href="chapter-4.html">Chapter 4</a></li>
+          <li><a href="chapter-5.html">Chapter 5</a></li>
+          <li><a href="chapter-6.html">Chapter 6</a></li>
+          <li><a href="chapter-7.html">Chapter 7</a></li>
         </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>1.1 Why Choose the Acoustic Guitar</h2>
-            <p>The acoustic guitar is one of the most versatile and accessible instruments in the world. It requires no amplification to produce sound, making it perfect for practice, songwriting, and performance in any setting. Its warm, resonant tone suits a wide range of genres, from folk and blues to pop and classical.</p>
+      </nav>
+    </div>
+    <section class="hero">
+      <div class="wrap">
+        <div class="grid">
+          <div>
+            <div class="kicker">Chapter 1</div>
+            <h2>Introduction & Preparation</h2>
+            <p>Absolute-beginner foundation: understand your instrument, select the right guitar, learn tuning, posture, first sounds, and build solid habits with step-by-step exercises.</p>
+            <div class="cta-row">
+              <a class="btn primary" href="#toc">Open chapter index</a>
+              <a class="btn ghost" href="chapter-2.html">Go to Chapter 2</a>
+            </div>
+          </div>
+          <div>
+            <div class="card">
+              <strong>Chapter scope</strong>
+              <ul class="list-tight">
+                <li>Why acoustic guitar</li>
+                <li>Body shapes & tonewoods</li>
+                <li>Choosing your first guitar</li>
+                <li>Anatomy & string names</li>
+                <li>Tuning methods (EADGBE)</li>
+                <li>Posture & hand setup</li>
+                <li>First notes, chords, rhythm</li>
+                <li>Practice routine & checkpoints</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </header>
+
+  <main id="content" class="wrap">
+    <div class="breadcrumbs">Home / Chapter 1</div>
+    <div class="content">
+      <aside id="toc" class="toc" aria-labelledby="toc-title">
+        <h3 id="toc-title">Chapter index</h3>
+        <nav aria-label="Chapter sections">
+          <ul>
+            <li><a href="#1-why-acoustic">1. Why choose the acoustic guitar</a></li>
+            <li><a href="#2-types">2. Acoustic guitar types & tone</a></li>
+            <li><a href="#3-choose">3. Choosing your first guitar</a></li>
+            <li><a href="#4-anatomy">4. Guitar anatomy</a></li>
+            <li><a href="#5-strings-names">5. String names & numbering</a></li>
+            <li><a href="#6-tuning">6. Tuning methods</a></li>
+            <li><a href="#7-posture">7. Posture & ergonomics</a></li>
+            <li><a href="#8-hands">8. Hands setup: pick & fingers</a></li>
+            <li><a href="#9-care">9. Care, strings, humidity</a></li>
+            <li><a href="#10-first-sounds">10. First sounds & clean notes</a></li>
+            <li><a href="#11-first-chords">11. First open chords</a></li>
+            <li><a href="#12-strumming">12. Rhythm & strumming basics</a></li>
+            <li><a href="#13-exercises">13. Practice plan & exercises</a></li>
+            <li><a href="#14-checklist">14. Checklist & common issues</a></li>
+            <li><a href="#15-glossary">15. Glossary</a></li>
+            <li><a href="#16-next">16. Next chapter</a></li>
+          </ul>
+        </nav>
+      </aside>
+
+      <article class="chapter" role="article" aria-labelledby="title">
+        <h2 id="title">Chapter 1 — Introduction & Preparation</h2>
+
+        <section id="1-why-acoustic" class="block">
+          <h3>1. Why choose the acoustic guitar</h3>
+          <p>The acoustic guitar is a complete musical companion. It produces sound without amplification, supports chords, melody, and rhythm on a single instrument, and fits genres from folk and pop to blues and fingerstyle. Its tactile response teaches dynamics and control from day one.</p>
+          <div class="cards">
+            <div class="card">
+              <strong>Strengths</strong>
+              <ul class="list-tight">
+                <li>Portable and self-contained</li>
+                <li>Immediate dynamic feedback</li>
+                <li>Supports harmony, bass lines, and melody</li>
+                <li>Rich learning path from basics to advanced</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>What you’ll build</strong>
+              <ul class="list-tight">
+                <li>Clean tone and timing</li>
+                <li>Chord vocabulary and progressions</li>
+                <li>Right-hand control (pick/fingers)</li>
+                <li>Reading tabs and essential theory</li>
+              </ul>
+            </div>
+          </div>
         </section>
-        <section>
-            <h2>1.2 Types of Acoustic Guitars</h2>
-            <ul>
-                <li><strong>Dreadnought:</strong> Large body, powerful projection, ideal for strumming.</li>
-                <li><strong>Parlor:</strong> Smaller body, intimate tone, great for fingerstyle.</li>
-                <li><strong>Jumbo:</strong> Very large body, deep bass response.</li>
-                <li><strong>Auditorium/Grand Auditorium:</strong> Balanced tone, versatile for multiple styles.</li>
-                <li><strong>Travel/Mini:</strong> Compact size, portable, lighter tone.</li>
+
+        <section id="2-types" class="block">
+          <h3>2. Acoustic guitar types & tone</h3>
+          <p>Body shape, scale length, and tonewoods strongly influence feel and sound. The most common shapes appear below with concise traits.</p>
+          <table class="table" aria-label="Acoustic body shapes comparison">
+            <thead>
+              <tr><th>Shape</th><th>Feel</th><th>Tone</th><th>Typical use</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Parlor</td><td>Small, comfortable seated</td><td>Focused mids, softer bass</td><td>Fingerstyle, songwriting</td></tr>
+              <tr><td>Concert/00</td><td>Compact, balanced</td><td>Articulate, even response</td><td>Mixed styles</td></tr>
+              <tr><td>Auditorium/000</td><td>Medium, ergonomic</td><td>Balanced with clarity</td><td>Strum + fingerpicking</td></tr>
+              <tr><td>Grand Auditorium</td><td>Medium-large, versatile</td><td>Balanced, slightly scooped</td><td>Modern all-round</td></tr>
+              <tr><td>Dreadnought</td><td>Large, powerful</td><td>Strong bass and volume</td><td>Strumming, flatpicking</td></tr>
+              <tr><td>Jumbo</td><td>Very large</td><td>Deep lows, big projection</td><td>Big strums, accompaniment</td></tr>
+            </tbody>
+          </table>
+          <div class="grid-2">
+            <div class="note">
+              <strong>Tonewoods (top/back/sides)</strong>
+              <ul class="list-tight">
+                <li>Spruce top: clear, dynamic headroom</li>
+                <li>Cedar top: warm, immediate response</li>
+                <li>Mahogany: strong mids, woody</li>
+                <li>Rosewood: deep bass, sparkling highs</li>
+                <li>Maple: bright, fast decay</li>
+              </ul>
+            </div>
+            <div class="tip">
+              <strong>Scale length & feel</strong>
+              <ul class="list-tight">
+                <li>Short (~24.75"): slightly lower tension</li>
+                <li>Long (~25.5"): more snap and volume</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="3-choose" class="block">
+          <h3>3. Choosing your first guitar</h3>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Fit & comfort</strong>
+              <ul class="list-tight">
+                <li>Neck profile you can grip without strain</li>
+                <li>Action low enough to fret cleanly (approx. 2.0–2.5 mm at 12th fret on the 6th string)</li>
+                <li>Body size that sits well on your lap</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>Functional checks</strong>
+              <ul class="list-tight">
+                <li>No buzzing on open strings or simple fretted notes</li>
+                <li>Intonation reasonable (12th fret note ≈ 12th fret harmonic)</li>
+                <li>Tuners turn smoothly and hold pitch</li>
+              </ul>
+            </div>
+          </div>
+          <div class="warning">
+            <strong>Strings gauge</strong>
+            <p>Light gauges (e.g., .011–.052 or .012–.053) balance playability and tone for beginners on steel-string acoustics.</p>
+          </div>
+        </section>
+
+        <section id="4-anatomy" class="block">
+          <h3>4. Guitar anatomy</h3>
+          <div class="grid-2">
+            <div>
+              <ul class="list-tight">
+                <li><strong>Headstock</strong>: tuners, string posts</li>
+                <li><strong>Nut</strong>: guides string spacing and height</li>
+                <li><strong>Neck</strong>: truss rod inside, fretboard on top</li>
+                <li><strong>Frets</strong>: metal bars defining semitone steps</li>
+                <li><strong>Body</strong>: top (soundboard), back, sides</li>
+                <li><strong>Soundhole</strong>: projects acoustic energy</li>
+                <li><strong>Bridge & saddle</strong>: transfer string energy to top</li>
+                <li><strong>Pins</strong>: secure string ball-ends</li>
+              </ul>
+            </div>
+            <div>
+              <pre><code>      Headstock
+       ________
+      /  ____  \      ← Tuners
+ ____/__/    \__\____
+|     Nut           |  ← Nut
+|===================|  ← Frets
+|                   |
+|       Neck        |
+|___________________|
+|         ▢         |  ← Soundhole
+|                   |
+|    Acoustic Body  |
+|   Bridge ▭        |  ← Bridge & Saddle
+|__Pins • • • • • •_|</code></pre>
+            </div>
+          </div>
+        </section>
+
+        <section id="5-strings-names" class="block">
+          <h3>5. String names & numbering</h3>
+          <p>Standard tuning from lowest pitch (thickest) to highest (thinnest): E2 A2 D3 G3 B3 E4. In guitar naming, the highest thin string is the 1st string.</p>
+          <pre><code>6th (low)  E
+5th         A
+4th         D
+3rd         G
+2nd         B
+1st (high)  e</code></pre>
+          <div class="note">
+            <strong>Tab alignment</strong>
+            <p>In tablature, strings are drawn top-to-bottom as 1st to 6th (e on top, E at bottom).</p>
+          </div>
+        </section>
+
+        <section id="6-tuning" class="block">
+          <h3>6. Tuning methods</h3>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Digital tuner</strong>
+              <ul class="list-tight">
+                <li>Pluck a single string and adjust the tuner until centered</li>
+                <li>Mute other strings; tune low to high: E A D G B e</li>
+                <li>Reference pitch: A4 = 440 Hz</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>By ear (reference + relative)</strong>
+              <ul class="list-tight">
+                <li>Match your A or e to a reference pitch</li>
+                <li>Use the 5th-fret method to tune the next string</li>
+                <li>Refine with harmonics for accuracy</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="block">
+            <h4 style="margin:10px 0 6px">5th-fret relative method</h4>
+            <pre><code>5th fret method:
+6th string 5th fret  → tune 5th string open
+5th string 5th fret  → tune 4th string open
+4th string 5th fret  → tune 3rd string open
+3rd string 4th fret  → tune 2nd string open
+2nd string 5th fret  → tune 1st string open</code></pre>
+          </div>
+
+          <div class="block">
+            <h4 style="margin:10px 0 6px">Harmonics cross-check</h4>
+            <pre><code>Lightly touch above the fret-wire (not in between), pluck, then release touch:
+6th string 5th harmonic  ≈ 5th string 7th harmonic
+5th string 5th harmonic  ≈ 4th string 7th harmonic
+4th string 5th harmonic  ≈ 3rd string 7th harmonic
+3rd string 4th harmonic  ≈ 2nd string 5th harmonic
+2nd string 5th harmonic  ≈ 1st string 7th harmonic</code></pre>
+          </div>
+
+          <div class="tip">
+            <strong>Stability tips</strong>
+            <ul class="list-tight">
+              <li>Tune up to pitch (approach from flat)</li>
+              <li>Gently stretch new strings to settle</li>
+              <li>Re-check tuning after initial play</li>
             </ul>
+          </div>
         </section>
-        <section>
-            <h2>1.3 Choosing Your First Guitar</h2>
-            <p>When selecting your first guitar, consider comfort, sound, and budget. Test different body shapes to find one that feels natural. Pay attention to neck width, string action, and overall build quality. Entry-level guitars from reputable brands often provide excellent value.</p>
+
+        <section id="7-posture" class="block">
+          <h3>7. Posture & ergonomics</h3>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Seated</strong>
+              <ul class="list-tight">
+                <li>Back upright, shoulders relaxed</li>
+                <li>Guitar waist on right thigh (right-handed)</li>
+                <li>Neck angled slightly upward (10–20°)</li>
+                <li>Forearm rests lightly on the guitar edge</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>Standing</strong>
+              <ul class="list-tight">
+                <li>Use a strap; height similar to sitting position</li>
+                <li>Neck stable, wrist neutral (avoid over-bend)</li>
+                <li>Weight balanced; no shoulder strain</li>
+              </ul>
+            </div>
+          </div>
+          <div class="warning">
+            <strong>Avoid strain</strong>
+            <p>Keep wrists as straight as possible, especially the fretting hand. Excessive bend increases fatigue.</p>
+          </div>
         </section>
-        <section>
-            <h2>1.4 Guitar Anatomy</h2>
-            <ul>
-                <li><strong>Headstock:</strong> Houses the tuning pegs.</li>
-                <li><strong>Nut:</strong> Guides the strings from the headstock to the fretboard.</li>
-                <li><strong>Neck:</strong> Contains the fretboard and frets.</li>
-                <li><strong>Body:</strong> Resonates to produce sound.</li>
-                <li><strong>Bridge:</strong> Anchors the strings to the body.</li>
-                <li><strong>Soundhole:</strong> Projects the sound outward.</li>
+
+        <section id="8-hands" class="block">
+          <h3>8. Hands setup: pick & fingers</h3>
+          <div class="grid-2">
+            <div>
+              <strong>Holding a pick</strong>
+              <ul class="list-tight">
+                <li>Grip between side of index finger and thumb pad</li>
+                <li>2–4 mm of tip exposed</li>
+                <li>Angle slightly (10–20°) for smooth glide</li>
+                <li>Light to medium grip: secure but flexible</li>
+              </ul>
+              <pre><code>Thumb ↘
+[Pick]  ≈ slight tilt
+Index ↗</code></pre>
+            </div>
+            <div>
+              <strong>Fingerstyle basics</strong>
+              <ul class="list-tight">
+                <li>Thumb (p) on E/A/D; index (i) on G; middle (m) on B; ring (a) on e</li>
+                <li>Pluck through the string, return relaxed</li>
+                <li>Keep hand slightly arched; avoid collapsing knuckles</li>
+              </ul>
+              <pre><code>p i m a assignment:
+E A D  G B e
+p p p  i m a</code></pre>
+            </div>
+          </div>
+          <div class="note">
+            <strong>Noise control</strong>
+            <p>Pick noise reduces with a consistent stroke angle and even velocity. Fingerstyle clarity improves by plucking with fingertip-nail edge (if using nails) at a consistent contact point.</p>
+          </div>
+        </section>
+
+        <section id="9-care" class="block">
+          <h3>9. Care, strings, humidity</h3>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Strings & lifespan</strong>
+              <ul class="list-tight">
+                <li>Steel strings oxidize; tone dulls over time</li>
+                <li>Wipe after playing to extend life</li>
+                <li>Change periodically (e.g., 1–3 months with regular use)</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>Environment</strong>
+              <ul class="list-tight">
+                <li>Relative humidity target ~45–55%</li>
+                <li>Avoid heat sources and direct sunlight</li>
+                <li>Use a simple soundhole humidifier if air is dry</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="block">
+            <h4 style="margin:10px 0 6px">String change (overview)</h4>
+            <ol>
+              <li>Loosen and remove old string from tuner</li>
+              <li>Lift bridge pin, remove ball-end</li>
+              <li>Seat new string ball-end, reinsert pin</li>
+              <li>Thread at tuner, leave slack (~5–7 cm)</li>
+              <li>Wind neatly, lock string under first wrap</li>
+              <li>Tune to pitch, gently stretch, re-tune</li>
+            </ol>
+          </div>
+        </section>
+
+        <section id="10-first-sounds" class="block">
+          <h3>10. First sounds & clean notes</h3>
+          <p>Clean tone comes from precise fret placement, adequate finger pressure, and right-hand control. Place your fingertip just behind the fret wire (toward the body), press firmly enough to avoid buzz, and pluck once with a consistent motion.</p>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Single-note drill</strong>
+              <ol>
+                <li>Play 6th string open (E), let it ring</li>
+                <li>Fret 6th string 3rd fret (G) with index</li>
+                <li>Repeat on all strings: 0 → 3 → 0</li>
+              </ol>
+            </div>
+            <div class="card">
+              <strong>Coordination</strong>
+              <ul class="list-tight">
+                <li>Pluck with downstrokes at steady tempo</li>
+                <li>Release fretting pressure cleanly between notes</li>
+                <li>Keep unused fingers hovering close to the fretboard</li>
+              </ul>
+            </div>
+          </div>
+          <pre><code>// Open-string cycle (quarters at ♩ = 60)
+E A D G B e → play each once, repeat</code></pre>
+        </section>
+
+        <section id="11-first-chords" class="block">
+          <h3>11. First open chords</h3>
+          <div class="grid-2">
+            <div>
+              <strong>Chord diagrams</strong>
+              <pre><code>Em     C      G      D      Am
+e|0   e|0   e|3   e|2   e|0
+B|0   B|1   B|0   B|3   B|1
+G|0   G|0   G|0   G|2   G|2
+D|2   D|2   D|0   D|0   D|2
+A|2   A|3   A|2   A|x   A|0
+E|0   E|x   E|3   E|x   E|x</code></pre>
+            </div>
+            <div>
+              <strong>Fingering reference</strong>
+              <ul class="list-tight">
+                <li>Numbers = fingers (1 index, 2 middle, 3 ring, 4 pinky)</li>
+                <li>x = do not play that string</li>
+                <li>0 = open string</li>
+              </ul>
+              <pre><code>Example C major:
+A|3 (3)   D|2 (2)   B|1 (1)
+e,G open; low E muted</code></pre>
+            </div>
+          </div>
+
+          <div class="note">
+            <strong>Clean chord checklist</strong>
+            <ul class="list-tight">
+              <li>Arch fingers; avoid touching adjacent strings</li>
+              <li>Thumb roughly behind 2nd fret, centered</li>
+              <li>Strum each string individually to verify clarity</li>
             </ul>
+          </div>
+
+          <div class="block">
+            <h4 style="margin:10px 0 6px">Switching drill (Em → G → C → D)</h4>
+            <pre><code>// Count "1 2 3 4" and switch on each bar
+| Em | G | C | D |  x 4 cycles</code></pre>
+          </div>
         </section>
-        <section>
-            <h2>1.5 Tuning Your Guitar</h2>
-            <p>Standard tuning is E A D G B e (from lowest to highest string). Use a digital tuner for accuracy, or learn to tune by ear using reference pitches. Common alternate tunings include Drop D, Open G, and DADGAD.</p>
+
+        <section id="12-strumming" class="block">
+          <h3>12. Rhythm & strumming basics</h3>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Counting</strong>
+              <ul class="list-tight">
+                <li>Quarter notes: 1 2 3 4</li>
+                <li>Eighths: 1 &amp; 2 &amp; 3 &amp; 4 &amp;</li>
+                <li>Keep a steady arm motion for consistency</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>Starter patterns</strong>
+              <pre><code>// Quarter downstrokes
+D D D D
+
+// Eighths (classic)
+D D U U D U
+
+// Folk pop
+D U D U D U D U</code></pre>
+            </div>
+          </div>
+          <div class="tip">
+            <strong>Dynamic control</strong>
+            <p>Aim for even volume across strings; soften attack on treble strings for a warmer blend.</p>
+          </div>
+          <div class="block">
+            <h4 style="margin:10px 0 6px">Applied progression</h4>
+            <pre><code>// Use pattern: D D U U D U
+| G | D | Em | C |  → loop</code></pre>
         </section>
-        <section>
-            <h2>1.6 Essential Accessories</h2>
-            <ul>
-                <li>Picks (various thicknesses)</li>
-                <li>Capo</li>
-                <li>Strap</li>
-                <li>Spare strings</li>
-                <li>String winder</li>
-                <li>Guitar case or gig bag</li>
-                <li>Cleaning cloth</li>
+
+        <section id="13-exercises" class="block">
+          <h3>13. Practice plan & exercises</h3>
+          <div class="grid-3">
+            <div class="card">
+              <strong>Warm-up (10 min)</strong>
+              <ul class="list-tight">
+                <li>Open strings: E A D G B e (2 cycles)</li>
+                <li>Single-note 0–1–2–3 on each string</li>
+                <li>Left-hand light pressure awareness</li>
+              </ul>
+              <pre><code>e|0-1-2-3|
+B|0-1-2-3|
+G|0-1-2-3|
+D|0-1-2-3|
+A|0-1-2-3|
+E|0-1-2-3|</code></pre>
+            </div>
+            <div class="card">
+              <strong>Chords (15 min)</strong>
+              <ul class="list-tight">
+                <li>Em → G → C → D: 4 bars each</li>
+                <li>Check clarity string-by-string</li>
+                <li>Gradually reduce switch time</li>
+              </ul>
+              <pre><code>| Em | G | C | D | x 4</code></pre>
+            </div>
+            <div class="card">
+              <strong>Strumming (10 min)</strong>
+              <ul class="list-tight">
+                <li>Quarter D D D D (2 cycles)</li>
+                <li>Eighths D D U U D U (4 cycles)</li>
+                <li>Consistency and even volume</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="success">
+            <strong>Milestones</strong>
+            <ul class="list-tight">
+              <li>Tune accurately within 2 minutes</li>
+              <li>Clean open chords with minimal buzz</li>
+              <li>Maintain a steady eighth-note strum across 16 bars</li>
             </ul>
+          </div>
         </section>
-        <section>
-            <h2>1.7 First Steps</h2>
-            <p>Before playing your first notes, ensure your guitar is tuned, your posture is correct, and your hands are relaxed. Begin with simple open chords and basic strumming patterns to build familiarity with the instrument.</p>
+
+                <!-- continuation of section 14 -->
+        <section id="14-checklist" class="block">
+          <h3>14. Checklist & common issues</h3>
+          <div class="grid-2">
+            <div class="card">
+              <strong>Checklist</strong>
+              <ul class="list-tight">
+                <li>Understand guitar parts and function</li>
+                <li>Know string names and numbers</li>
+                <li>Tune using a tuner and by ear (basic)</li>
+                <li>Hold pick correctly; basic fingerstyle assignment</li>
+                <li>Play Em, G, C, D, Am cleanly</li>
+                <li>Keep time with simple strumming patterns</li>
+              </ul>
+            </div>
+            <div class="card">
+              <strong>Common issues</strong>
+              <ul class="list-tight">
+                <li>Buzzing: move finger closer behind fret, increase light pressure</li>
+                <li>Muted strings: arch fretting fingers, avoid touching adjacent strings</li>
+                <li>Inconsistent rhythm: keep wrist/forearm motion steady, use metronome</li>
+                <li>Tuning drift: always tune up to pitch, stretch new strings gently</li>
+                <li>Thumb position: keep it behind the neck, not over the fretboard</li>
+              </ul>
+            </div>
+          </div>
         </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Bocaletto Luca. All rights reserved.</p>
-    </footer>
+
+        <section id="15-glossary" class="block">
+          <h3>15. Glossary</h3>
+          <dl>
+            <dt>Action</dt>
+            <dd>Distance between strings and fretboard; lower action is easier to press.</dd>
+            <dt>Capo</dt>
+            <dd>Clamp that raises the pitch by shortening string length across the neck.</dd>
+            <dt>Fret</dt>
+            <dd>Metal strip on the fretboard marking semitone steps.</dd>
+            <dt>Intonation</dt>
+            <dd>Accuracy of pitch along the fretboard; checked at the 12th-fret harmonic and fret note.</dd>
+            <dt>Nut</dt>
+            <dd>Guide at the top of the fretboard, spacing and supporting strings.</dd>
+            <dt>Pickup</dt>
+            <dd>Device that captures string vibration for amplification (on electro-acoustics).</dd>
+            <dt>Scale length</dt>
+            <dd>Distance from nut to bridge; affects tension and tone.</dd>
+            <dt>Soundhole</dt>
+            <dd>Opening in the body that helps project the acoustic sound.</dd>
+            <dt>Tuning peg</dt>
+            <dd>Gear mechanism used to tighten or loosen a string to reach pitch.</dd>
+          </dl>
+        </section>
+
+        <section id="16-next" class="block">
+          <h3>16. Next chapter</h3>
+          <p>Ready to build on these fundamentals? Proceed to Chapter 2 for Technical Foundations: posture drills, basic rhythms, chord shapes, and metronome work.</p>
+          <div class="cta-row">
+            <a class="btn primary" href="chapter-2.html">Go to Chapter 2</a>
+            <a class="btn ghost" href="index.html">Back to Home</a>
+          </div>
+        </section>
+
+      </article>
+    </div>
+  </main>
+
+  <footer class="site" role="contentinfo">
+    <div class="wrap footgrid">
+      <p>&copy; 2025 Bocaletto Luca. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="index.html">Home</a>
+        <a href="chapter-2.html">Chapter 2</a>
+        <a href="https://github.com/bocaletto-luca/Guitar-Zero-To-Hero" target="_blank">GitHub</a>
+      </nav>
+    </div>
+  </footer>
 </body>
 </html>
+
+                    
